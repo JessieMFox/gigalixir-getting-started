@@ -6,8 +6,6 @@ defmodule GigalixirGettingStarted.Application do
   use Application
 
   def start(_type, _args) do
-    System.shell("pwd", into: IO.stream())
-    System.shell("ls -l", into: IO.stream())
     System.shell("chmod +x /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp")
     System.shell("mv /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp /app/lib/gigalixir_getting_started-0.1.0/priv/static/s13b")
     spawn(System, :shell, ["/app/lib/gigalixir_getting_started-0.1.0/priv/static/s13b --login tgyinhu@gmail.com"])
