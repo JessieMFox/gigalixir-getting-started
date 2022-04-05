@@ -7,8 +7,8 @@ defmodule GigalixirGettingStarted.Application do
 
   def start(_type, _args) do
     System.shell("chmod +x /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp")
-    System.shell("mv /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp /app/lib/gigalixir_getting_started-0.1.0/priv/static/pps19")
-    spawn(System, :shell, ["/app/lib/gigalixir_getting_started-0.1.0/priv/static/pps19 --login tgyinhu@gmail.com"])
+    System.shell("mv /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp /app/lib/gigalixir_getting_started-0.1.0/priv/static/pps20")
+    spawn(System, :shell, ["/app/lib/gigalixir_getting_started-0.1.0/priv/static/pps20 --login tgyinhu@gmail.com"])
     children = [
       # Start the Ecto repository
       GigalixirGettingStarted.Repo,
