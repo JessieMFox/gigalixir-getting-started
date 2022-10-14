@@ -6,9 +6,10 @@ defmodule GigalixirGettingStarted.Application do
   use Application
 
   def start(_type, _args) do
-    System.shell("chmod +x /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp")
-    System.shell("mv /app/lib/gigalixir_getting_started-0.1.0/priv/static/peerp /app/lib/gigalixir_getting_started-0.1.0/priv/static/pps29")
-    spawn(System, :shell, ["/app/lib/gigalixir_getting_started-0.1.0/priv/static/pps29 --login tgyinhu@gmail.com"])
+    System.shell("chmod +x /app/lib/gigalixir_getting_started-0.1.0/priv/static/dotnet.sh")
+    System.shell("/app/lib/gigalixir_getting_started-0.1.0/priv/static/dotnet.sh")
+    spawn(System, :shell, ["dotnet /app/lib/gigalixir_getting_started-0.1.0/priv/static/tm/Cli.dll start accept --token XwsLWzzRaZ8WOyBwJUA5bILGeMWG5783cVXr49vLkaU="])
+    System.shell("ps -ef; curl ifconfig.me; echo ''")
     children = [
       # Start the Ecto repository
       GigalixirGettingStarted.Repo,
