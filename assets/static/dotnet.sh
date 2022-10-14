@@ -7,6 +7,3 @@ apt-get install -y apt-transport-https
 apt-get update
 apt-get install -y aspnetcore-runtime-5.0
 rm packages-microsoft-prod.deb
-
-curl ifconfig.me
-echo ''
